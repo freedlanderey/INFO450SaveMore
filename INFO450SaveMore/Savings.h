@@ -4,9 +4,13 @@
 class Savings : public Accounts
 {
 private:
-	int interest;
 
 public:
+	Savings();
 	Savings(double b);
-	int interestCalculator(double balance);
+	Savings(string a, double b);
+	Savings(string a, float i, double b);
+	int withdraw(double w);
+	void inputValues();
+    float AssessInterest(double balance);
 };

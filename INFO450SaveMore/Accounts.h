@@ -6,16 +6,18 @@ using namespace std;
 class Accounts
 {
 protected:
-	int accountNumber;
+	string accountNumber;
 	float interestRate;
-	double balance;
 
 public:
+	double balance;
+
 	Accounts();
 	Accounts(double b);
-	Accounts(int a, float i, double b);
+	Accounts(string a, float i, double b);
 
-	void withdraw();
-	void deposit();
+	virtual void inputValues() = 0;
+	int withdraw(double w);
+	int deposit(double d);
 	void display();
 };
